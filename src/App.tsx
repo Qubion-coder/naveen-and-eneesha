@@ -581,7 +581,7 @@ export default function WeddingInvitation() {
                     <span className="text-theme-500 block text-[8px] md:text-[10px] mb-3 md:mb-4 tracking-[0.8em]">Wedding Celebration</span>
                     {hasGuest && (
                       <span className="block text-2xl md:text-3xl font-playball text-theme-700 mb-6 capitalize tracking-wide drop-shadow-sm">
-                        Dear {guestPrefix} {guestName},
+                        {guestPrefix.toLowerCase() === 'dear' ? `Dear ${guestName},` : `Dear ${guestPrefix} ${guestName},`}
                       </span>
                     )}
                     You are cordially invited to<br className="hidden md:block" />
